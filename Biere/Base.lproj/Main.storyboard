@@ -15,8 +15,75 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="canecaNew4" translatesAutoresizingMaskIntoConstraints="NO" id="qFC-G1-3cL">
+                                <rect key="frame" x="77" y="134" width="260" height="201"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Informe o usuário" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a2g-HF-1H7">
+                                <rect key="frame" x="10" y="445" width="394" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Informe a senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9LQ-Az-9Yw">
+                                <rect key="frame" x="10" y="489" width="394" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqz-RF-hOx">
+                                <rect key="frame" x="10" y="684" width="394" height="42"/>
+                                <color key="backgroundColor" red="1" green="0.66930478810000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Cadastrar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49e-kN-lxN">
+                                <rect key="frame" x="10" y="533" width="394" height="42"/>
+                                <color key="backgroundColor" red="1" green="0.66930478810000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSa-47-jlF">
+                                <rect key="frame" x="165.33333333333334" y="335" width="83.666666666666657" height="60.666666666666686"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Biere">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="36" name="Noteworthy-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="4" height="3"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.98882704970000002" green="0.49182903770000003" blue="0.056613899769999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9LQ-Az-9Yw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="4mI-aR-vrl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9LQ-Az-9Yw" secondAttribute="trailing" constant="10" id="4sl-nu-sou"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eqz-RF-hOx" secondAttribute="trailing" constant="10" id="8zd-lX-mI6"/>
+                            <constraint firstItem="bSa-47-jlF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="A3A-dT-oWW"/>
+                            <constraint firstItem="a2g-HF-1H7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Mmw-90-oFL"/>
+                            <constraint firstItem="bSa-47-jlF" firstAttribute="top" secondItem="qFC-G1-3cL" secondAttribute="bottom" id="NYj-nr-915"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a2g-HF-1H7" secondAttribute="trailing" constant="10" id="T4a-ox-zOh"/>
+                            <constraint firstItem="a2g-HF-1H7" firstAttribute="top" secondItem="qFC-G1-3cL" secondAttribute="bottom" constant="110" id="ZES-x3-Yya"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="49e-kN-lxN" secondAttribute="trailing" constant="10" id="ekr-Ce-bNJ"/>
+                            <constraint firstItem="qFC-G1-3cL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="90" id="fDT-Lb-DLP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eqz-RF-hOx" secondAttribute="bottom" constant="10" id="i4F-sv-juW"/>
+                            <constraint firstItem="49e-kN-lxN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="nxK-6e-tAM"/>
+                            <constraint firstItem="49e-kN-lxN" firstAttribute="top" secondItem="9LQ-Az-9Yw" secondAttribute="bottom" constant="10" id="q9Y-cz-tkW"/>
+                            <constraint firstItem="qFC-G1-3cL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sbY-dT-JU8"/>
+                            <constraint firstItem="eqz-RF-hOx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="uRq-r8-dec"/>
+                            <constraint firstItem="qFC-G1-3cL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vdS-xv-0vl"/>
+                            <constraint firstItem="9LQ-Az-9Yw" firstAttribute="top" secondItem="a2g-HF-1H7" secondAttribute="bottom" constant="10" id="vix-Ie-oLO"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Biere" id="6kW-Yi-HBt"/>
                 </viewController>
@@ -204,6 +271,7 @@
     </scenes>
     <color key="tintColor" red="0.98477157360000001" green="0.48742178619999998" blue="0.080325971930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
+        <image name="canecaNew4" width="260" height="201"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
