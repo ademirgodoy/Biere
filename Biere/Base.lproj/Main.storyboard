@@ -38,6 +38,9 @@
                                 <state key="normal" title="Cadastrar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnCadastrar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PwE-Ag-igC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49e-kN-lxN">
                                 <rect key="frame" x="10" y="489" width="394" height="42"/>
@@ -47,6 +50,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="btnLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vzt-cn-4av"/>
                                     <segue destination="GFR-xW-SmH" kind="show" identifier="login" id="s63-lZ-8is"/>
                                 </connections>
                             </button>
@@ -89,12 +93,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Biere" id="6kW-Yi-HBt"/>
+                    <connections>
+                        <outlet property="txtSenha" destination="9LQ-Az-9Yw" id="gtl-rH-hTt"/>
+                        <outlet property="txtUsuario" destination="a2g-HF-1H7" id="oFL-ah-ORd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1050.7246376811595" y="61.141304347826093"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Dados-->
         <scene sceneID="BHW-lZ-b0K">
             <objects>
                 <tableViewController id="GFR-xW-SmH" sceneMemberID="viewController">
@@ -115,12 +123,28 @@
                             </connections>
                         </button>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="NIs-Qo-rti">
-                                <rect key="frame" x="0.0" y="70" width="414" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="Asf-F5-FWU" detailTextLabel="tfK-Sf-aBU" style="IBUITableViewCellStyleSubtitle" id="NIs-Qo-rti">
+                                <rect key="frame" x="0.0" y="70" width="414" height="55.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NIs-Qo-rti" id="aef-9E-tL5">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Asf-F5-FWU">
+                                            <rect key="frame" x="20" y="8.9999999999999982" width="33" height="20.333333333333332"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tfK-Sf-aBU">
+                                            <rect key="frame" x="19.999999999999996" y="31.333333333333332" width="43.666666666666664" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -129,7 +153,7 @@
                             <outlet property="delegate" destination="GFR-xW-SmH" id="qoQ-2B-DL9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="VCw-mn-LnZ"/>
+                    <navigationItem key="navigationItem" title="Dados" id="VCw-mn-LnZ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kmd-qX-zIJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -263,6 +287,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="3qQ-vy-z5G">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.99669283630000005" green="0.49938422440000002" blue="0.030871629710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
