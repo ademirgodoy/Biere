@@ -14,6 +14,8 @@
 		B8D64F5C255A1AAE00B7696E /* Biere.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B8D64F5A255A1AAE00B7696E /* Biere.xcdatamodeld */; };
 		B8D64F5E255A1AAF00B7696E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8D64F5D255A1AAF00B7696E /* Assets.xcassets */; };
 		B8D64F61255A1AAF00B7696E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8D64F5F255A1AAF00B7696E /* LaunchScreen.storyboard */; };
+		B8DE498425770543008D92B4 /* CervejaViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DE498325770543008D92B4 /* CervejaViewControler.swift */; };
+		B8EBE6A22575BD31000A77B4 /* Cerveja.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EBE6A12575BD31000A77B4 /* Cerveja.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		B8D64F5D255A1AAF00B7696E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8D64F60255A1AAF00B7696E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8D64F62255A1AAF00B7696E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8DE498325770543008D92B4 /* CervejaViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CervejaViewControler.swift; sourceTree = "<group>"; };
+		B8EBE6A12575BD31000A77B4 /* Cerveja.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cerveja.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +65,9 @@
 				B8D64F51255A1AAE00B7696E /* AppDelegate.swift */,
 				B8D64F53255A1AAE00B7696E /* SceneDelegate.swift */,
 				B8D64F55255A1AAE00B7696E /* ViewController.swift */,
+				B8EBE6A12575BD31000A77B4 /* Cerveja.swift */,
 				B8D64F57255A1AAE00B7696E /* Main.storyboard */,
+				B8DE498325770543008D92B4 /* CervejaViewControler.swift */,
 				B8D64F5D255A1AAF00B7696E /* Assets.xcassets */,
 				B8D64F5F255A1AAF00B7696E /* LaunchScreen.storyboard */,
 				B8D64F62255A1AAF00B7696E /* Info.plist */,
@@ -140,7 +146,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8EBE6A22575BD31000A77B4 /* Cerveja.swift in Sources */,
 				B8D64F56255A1AAE00B7696E /* ViewController.swift in Sources */,
+				B8DE498425770543008D92B4 /* CervejaViewControler.swift in Sources */,
 				B8D64F5C255A1AAE00B7696E /* Biere.xcdatamodeld in Sources */,
 				B8D64F52255A1AAE00B7696E /* AppDelegate.swift in Sources */,
 				B8D64F54255A1AAE00B7696E /* SceneDelegate.swift in Sources */,
