@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B82D2FDA2578013500001AB2 /* CervejaCelula.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82D2FD92578013500001AB2 /* CervejaCelula.swift */; };
+		B82D2FDD25780C9200001AB2 /* DetalheCervejaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82D2FDC25780C9200001AB2 /* DetalheCervejaViewController.swift */; };
 		B8D64F52255A1AAE00B7696E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D64F51255A1AAE00B7696E /* AppDelegate.swift */; };
 		B8D64F54255A1AAE00B7696E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D64F53255A1AAE00B7696E /* SceneDelegate.swift */; };
 		B8D64F56255A1AAE00B7696E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D64F55255A1AAE00B7696E /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B82D2FD92578013500001AB2 /* CervejaCelula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CervejaCelula.swift; sourceTree = "<group>"; };
+		B82D2FDC25780C9200001AB2 /* DetalheCervejaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheCervejaViewController.swift; sourceTree = "<group>"; };
 		B8D64F4E255A1AAE00B7696E /* Biere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Biere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8D64F51255A1AAE00B7696E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8D64F53255A1AAE00B7696E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,8 +70,10 @@
 				B8D64F53255A1AAE00B7696E /* SceneDelegate.swift */,
 				B8D64F55255A1AAE00B7696E /* ViewController.swift */,
 				B8EBE6A12575BD31000A77B4 /* Cerveja.swift */,
+				B82D2FD92578013500001AB2 /* CervejaCelula.swift */,
 				B8D64F57255A1AAE00B7696E /* Main.storyboard */,
 				B8DE498325770543008D92B4 /* CervejaViewControler.swift */,
+				B82D2FDC25780C9200001AB2 /* DetalheCervejaViewController.swift */,
 				B8D64F5D255A1AAF00B7696E /* Assets.xcassets */,
 				B8D64F5F255A1AAF00B7696E /* LaunchScreen.storyboard */,
 				B8D64F62255A1AAF00B7696E /* Info.plist */,
@@ -149,9 +155,11 @@
 				B8EBE6A22575BD31000A77B4 /* Cerveja.swift in Sources */,
 				B8D64F56255A1AAE00B7696E /* ViewController.swift in Sources */,
 				B8DE498425770543008D92B4 /* CervejaViewControler.swift in Sources */,
+				B82D2FDA2578013500001AB2 /* CervejaCelula.swift in Sources */,
 				B8D64F5C255A1AAE00B7696E /* Biere.xcdatamodeld in Sources */,
 				B8D64F52255A1AAE00B7696E /* AppDelegate.swift in Sources */,
 				B8D64F54255A1AAE00B7696E /* SceneDelegate.swift in Sources */,
+				B82D2FDD25780C9200001AB2 /* DetalheCervejaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
