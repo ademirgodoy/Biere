@@ -9,12 +9,13 @@ import UIKit
 
 class CervejaViewControler: UITableViewController {
     var cervejas: [Cerveja] = []
+    var btndesabilitado = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         var cerveja: Cerveja
-        
+                
         cerveja = Cerveja(nome: "Delirium Tremens", pais: "Bélgica", tipo: "Belgian Golden Strong Ale", bdus: "Alto", teorAlcoolico: "8,5%", comentario: "É uma cerveja belga considerada por muitos como a melhor cerveja do mundo. Uma cerveja de estilo Belgian Golden Strong Ale dourada e brilhante, com aromas frutados, alcoólicos, e sabores que mais parecem frutas cítricas, com leve toque de damasco e caramelo. É uma cerveja complexa, com uma riqueza de aromas e sabores que deixam qualquer apreciador completamente apaixonado.")
         
         cervejas.append(cerveja)
@@ -32,13 +33,41 @@ class CervejaViewControler: UITableViewController {
         
         let cerveja : Cerveja = cervejas[indexPath.row]
         
-        let celula = tableView.dequeueReusableCell(withIdentifier: "celulaReuso", for: indexPath)
+        let celula = tableView.dequeueReusableCell(withIdentifier: "celulaReuso", for: indexPath) as! CervejaCelula
         
-        celula.textLabel?.text = cerveja.nome
-        celula.detailTextLabel?.text = cerveja.tipo
+        celula.cervLabel.text = cerveja.nome
+        celula.detCervLabel.text = cerveja.tipo
         
         return celula
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "adicionar"{
+            btndesabilitado = true
+            
+            let viewControlerDestinoAdic = segue.destination as! DetalheCervejaViewController
+            
+            viewControlerDestinoAdic.btndesabilitado = btndesabilitado
+            
+        }
+        
+        if segue.identifier == "alterar"{
+            
+            if let indexPath = tableView.indexPathForSelectedRow{
+                
+                btndesabilitado = false
+                
+                let cervejaSelecionada = self.cervejas[indexPath.row]
+                
+                let viewControlerDestino = segue.destination as! DetalheCervejaViewController
+                
+                viewControlerDestino.btndesabilitado = btndesabilitado
+                
+                viewControlerDestino.cerveja = cervejaSelecionada
+                
+            }
+        }
     }
     
     

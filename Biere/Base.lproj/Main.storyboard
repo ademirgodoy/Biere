@@ -124,7 +124,7 @@
                             </connections>
                         </button>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celulaReuso" textLabel="Asf-F5-FWU" detailTextLabel="tfK-Sf-aBU" style="IBUITableViewCellStyleSubtitle" id="NIs-Qo-rti">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celulaReuso" textLabel="Asf-F5-FWU" detailTextLabel="tfK-Sf-aBU" style="IBUITableViewCellStyleSubtitle" id="NIs-Qo-rti" customClass="CervejaCelula" customModule="Biere" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="70" width="414" height="55.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NIs-Qo-rti" id="aef-9E-tL5">
@@ -148,6 +148,8 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="cervLabel" destination="Asf-F5-FWU" id="i5Z-kF-sH1"/>
+                                    <outlet property="detCervLabel" destination="tfK-Sf-aBU" id="kaq-96-sbB"/>
                                     <segue destination="z4q-wa-ZH0" kind="show" identifier="alterar" id="4Ky-Br-LIW"/>
                                 </connections>
                             </tableViewCell>
@@ -163,10 +165,10 @@
             </objects>
             <point key="canvasLocation" x="1812" y="68"/>
         </scene>
-        <!--View Controller-->
+        <!--Detalhe Cerveja View Controller-->
         <scene sceneID="lZ1-dx-cE8">
             <objects>
-                <viewController id="z4q-wa-ZH0" sceneMemberID="viewController">
+                <viewController id="z4q-wa-ZH0" customClass="DetalheCervejaViewController" customModule="Biere" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FZC-vO-3gG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -243,12 +245,6 @@
                                 <color key="textColor" red="0.98477157360000001" green="0.48742178619999998" blue="0.080325971930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fPl-Og-ibR">
-                                <rect key="frame" x="10" y="288" width="394" height="321"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyS-sV-a19">
                                 <rect key="frame" x="10" y="640" width="394" height="42"/>
                                 <color key="backgroundColor" red="0.98477157360000001" green="0.48742178619999998" blue="0.080325971930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -256,6 +252,9 @@
                                 <state key="normal" title="Salvar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnSalvar:" destination="z4q-wa-ZH0" eventType="touchUpInside" id="Ltc-xz-1Ld"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nko-Ih-svI">
                                 <rect key="frame" x="10" y="588" width="394" height="42"/>
@@ -264,7 +263,17 @@
                                 <state key="normal" title="Excluir">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnExcluir:" destination="z4q-wa-ZH0" eventType="touchUpInside" id="QTK-gv-cJf"/>
+                                </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="6gv-yo-D67">
+                                <rect key="frame" x="10" y="288" width="384" height="252"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5JT-0U-DgB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -278,10 +287,19 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tOM-Nl-XlX"/>
+                    <connections>
+                        <outlet property="bdusCerveja" destination="heG-6D-tzH" id="CQE-pi-U7q"/>
+                        <outlet property="btnExcluir" destination="Nko-Ih-svI" id="KbP-Zc-aM3"/>
+                        <outlet property="comentarioCerveja" destination="6gv-yo-D67" id="hiR-nC-bbS"/>
+                        <outlet property="nomeCerveja" destination="fbw-KJ-js3" id="vkW-tT-uRr"/>
+                        <outlet property="paisCerveja" destination="uza-ay-L9S" id="lyh-qN-6eY"/>
+                        <outlet property="teorAlcCerveja" destination="igG-9G-3Jz" id="dVK-SN-zix"/>
+                        <outlet property="tipoCerveja" destination="Fzn-B9-wMd" id="c6H-cy-rDp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IrX-Ob-1FA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2587" y="68"/>
+            <point key="canvasLocation" x="2586.9565217391305" y="67.663043478260875"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pfV-7N-Gv5">
@@ -311,7 +329,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="4Ky-Br-LIW"/>
+        <segue reference="560-oF-Ybz"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.98477157360000001" green="0.48742178619999998" blue="0.080325971930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
