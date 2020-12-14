@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import CoreData
 
 class CervejaViewControler: UITableViewController {
+    //var context : NSManagedObjectContext!
+    
     var cervejas: [Cerveja] = []
     var btndesabilitado = false
     
