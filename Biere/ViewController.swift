@@ -66,6 +66,13 @@ class ViewController: UIViewController {
             } catch let erro {
                 alertas(mensagem: erro.localizedDescription, titulo: "Erro no Login")
             }
+            
+            /*if segue.identifier == "login"{
+                btndesabilitado = true
+                let viewControlerDestinoAdic = segue.destination as! DetalheCervejaViewController
+                viewControlerDestinoAdic.btndesabilitado = btndesabilitado
+                
+            }*/
                         
         }
         

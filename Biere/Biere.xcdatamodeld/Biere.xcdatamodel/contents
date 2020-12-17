@@ -7,13 +7,14 @@
         <attribute name="pais" optional="YES" attributeType="String"/>
         <attribute name="teorAlcoolico" optional="YES" attributeType="String"/>
         <attribute name="tipo" optional="YES" attributeType="String"/>
+        <attribute name="usuario" optional="YES" attributeType="String"/>
     </entity>
     <entity name="UsuarioCD" representedClassName="UsuarioCD" syncable="YES" codeGenerationType="class">
         <attribute name="senha" optional="YES" attributeType="String"/>
         <attribute name="usuario" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="CervejaCD" positionX="-54" positionY="9" width="128" height="133"/>
+        <element name="CervejaCD" positionX="-54" positionY="9" width="128" height="148"/>
         <element name="UsuarioCD" positionX="-63" positionY="-18" width="128" height="73"/>
     </elements>
 </model>
