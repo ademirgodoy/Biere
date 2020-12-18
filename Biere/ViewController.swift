@@ -9,6 +9,8 @@ import UIKit
 import CoreData
 
 class ViewController: UIViewController {
+    var usuLogin : String!
+    
     var context : NSManagedObjectContext!
     
     let mensUsuarioEmpty = "Usuário não informado!"
@@ -67,15 +69,21 @@ class ViewController: UIViewController {
                 alertas(mensagem: erro.localizedDescription, titulo: "Erro no Login")
             }
             
-            /*if segue.identifier == "login"{
-                btndesabilitado = true
-                let viewControlerDestinoAdic = segue.destination as! DetalheCervejaViewController
-                viewControlerDestinoAdic.btndesabilitado = btndesabilitado
-                
-            }*/
-                        
         }
-        
+        print("--> login"+String(describing: txtUsuario.text))
+        usuLogin = txtUsuario.text
+        txtUsuario.text? = ""
+        txtSenha.text? = ""
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            print("teste-< 2")
+            if segue.identifier == "login"{
+                let viewControlerDestino = segue.destination as! CervejaViewControler
+                viewControlerDestino.usuario = usuLogin
+                print(viewControlerDestino.usuario!)
+            }
+     
     }
     
     
